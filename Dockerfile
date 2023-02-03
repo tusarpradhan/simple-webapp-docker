@@ -21,7 +21,7 @@ RUN yum install -y python3 -y
 RUN yum install python3-pip -y
 #RUN apt-get update && apt-get install -y python3 python3-pip
 
-RUN pip3 install flask -y
+RUN pip3 install flask
 
 COPY app.py /opt/
 
