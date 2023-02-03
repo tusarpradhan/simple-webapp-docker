@@ -1,9 +1,18 @@
-FROM ubuntu:latest
+FROM tomcat:8.0
 
-RUN apt-get update && apt-get install -y python3 python3-pip
+#COPY user/User.html /usr/local/tomcat/webapps/user/
 
-RUN pip install flask 
 
-COPY app.py /opt/
+CMD ["catalina.sh", "run"]
 
-ENTRYPOINT FLASK_APP=/opt/app.py flask run --host=0.0.0.0 --port=8080
+
+
+#FROM ubuntu:latest
+
+#RUN apt-get update && apt-get install -y python3 python3-pip
+
+#RUN pip install flask 
+
+#COPY app.py /opt/
+
+#ENTRYPOINT FLASK_APP=/opt/app.py flask run --host=0.0.0.0 --port=8080
