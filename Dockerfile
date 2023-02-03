@@ -1,4 +1,5 @@
-FROM tomcat:8.0
+FROM nginx
+#FROM tomcat:8.0
 
 #COPY user/User.html /usr/local/tomcat/webapps/user/
 
