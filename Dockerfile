@@ -16,9 +16,9 @@ RUN sed -i 's/mirrorlist/#mirrorlist/g' /etc/yum.repos.d/CentOS-*
 RUN sed -i 's|#baseurl=http://mirror.centos.org|baseurl=http://vault.centos.org|g' /etc/yum.repos.d/CentOS-*
 #CMD /bin/bash
 
-RUN sudo yum update -y
-RUN sudo yum install -y python3 -y
-RUN sudo yum install python3-pip -y
+RUN yum update -y
+RUN yum install -y python3 -y
+RUN yum install python3-pip -y
 #RUN apt-get update && apt-get install -y python3 python3-pip
 
 RUN pip install flask 
